@@ -4,7 +4,7 @@ import CommentSection from "./CommentSection"
 import type { AlbumContainerProps } from "@/types/album.types"
 
 const AlbumContainer = ({ album }: AlbumContainerProps) => {
-    
+
     return(
         <section className="bg-background py-10">
             <div className="container">
@@ -36,11 +36,13 @@ const AlbumContainer = ({ album }: AlbumContainerProps) => {
                         <div className="flex gap-20 mb-10">
                             <div className="flex flex-col items-center">
                                 <h3>Total count</h3>
-                                <p>{album?.getRatingStats.totalCount}</p>
+                                <p className="font-bold text-xl"
+                                >{album?.getRatingStats.totalCount}</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <h3>Average rating</h3>
-                                <p>{album?.getRatingStats.averagRating?.toFixed(1)}</p>
+                                <p className="font-bold text-xl"
+                                >{album?.getRatingStats.averageRating.toFixed(1)}</p>
                             </div>
                         </div>
                         {(!album && <p>Error getting ratings</p>)}

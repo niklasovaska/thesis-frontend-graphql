@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 
 interface LoaderProps {
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "md" | "lg" | "xl"
   className?: string
 }
 
@@ -10,6 +10,7 @@ export default function Loader({ size = "md", className }: LoaderProps) {
     sm: "h-4 w-4 border-2",
     md: "h-6 w-6 border-2",
     lg: "h-8 w-8 border-4",
+    xl: "h-10 w-10 border-4",
   }
 
   return (

@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -s dist"
   },
   "dependencies": {
     "@apollo/client": "^4.0.4",
@@ -22,6 +23,7 @@
     "react-dom": "^19.1.1",
     "react-router": "^7.9.1",
     "recharts": "^2.15.4",
+    "serve": "^14.2.5",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13"
   },

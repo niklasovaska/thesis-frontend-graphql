@@ -7,7 +7,7 @@ export type AlbumsPaginatedQuery = {
 }
 
 export type AlbumGridProps = {
-  albums: AlbumItem[]
+  albums: AlbumItem[] | undefined
 
 }
 
@@ -67,7 +67,7 @@ export type Stats = {
   fourCount: number
   fiveCount: number
   totalCount: number
-  averagRating: number
+  averageRating: number
 }
 
 export type StatChartProps = {

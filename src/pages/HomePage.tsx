@@ -42,14 +42,14 @@ const HomePage = () => {
 
     if(error) return <p>Error fetching data...</p>
 
-    if (!data || data.getAlbumsPaginated.items.length === 0) {
+    if (data?.getAlbumsPaginated.items.length === 0) {
     return <p className="text-sm text-muted-foreground">No topics found</p>
     }
 
     return(
         <div className='flex flex-col items-center'>
             <AlbumGrid 
-                albums={data.getAlbumsPaginated.items}
+                albums={data?.getAlbumsPaginated.items}
             />
             {hasNextPage && (
                 <Button 
@@ -60,7 +60,7 @@ const HomePage = () => {
                     {loading ? 'Loading...' : 'Load more'}
                 </Button>
             )}
-            {loading && <LoadingAlbumGrid />}
+            {!data && loading && <LoadingAlbumGrid />}
         </div>
     )
     

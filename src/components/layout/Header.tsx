@@ -9,7 +9,6 @@ const Header = () => {
                 <Link to={'/'}>
                     <li>Home</li>
                 </Link>
-                <li>Sign in</li>
                 <ThemeToggle />
             </ul>
         </div>

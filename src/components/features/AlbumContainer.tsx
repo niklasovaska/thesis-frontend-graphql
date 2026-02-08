@@ -21,8 +21,8 @@ const AlbumContainer = ({ album }: AlbumContainerProps) => {
                         </p>
                         <img 
                             src='/album_img_1.png' 
-                            width='380' 
-                            height='380'
+                            width='280' 
+                            height='280'
                             className='rounded-full object-scale-down' 
                             alt='An image of vinyl disc' 
                         />

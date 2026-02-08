@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import { REVIEW_STATS_FRAGMENT } from '../fragments/fragment.queries'
+import { REVIEW_STATS_FRAGMENT, REVIEWS_WITH_CONTENT_FRAGMENT } from '../fragments/fragment.queries'
 
 export const GET_ALBUMS_PAGINATED = gql`
   query GetAlbumsPaginated($cursor: String, $limit: Int!){
@@ -60,17 +60,11 @@ export const GET_ALBUM_INFO_PAGE = gql`
         trackNumber
         title
       }
-      getReviewsWithContent {
-        content
-        createdAt
-        rating
-        user {
-          name
-        }
-      }
+      ...ReviewsWithContent
       ...ReviewStats
     }
   }
 
+  ${REVIEWS_WITH_CONTENT_FRAGMENT}
   ${REVIEW_STATS_FRAGMENT}
 `
